@@ -1,103 +1,183 @@
-/* Reset + base */
+/* style.css */
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', 'Helvetica Neue', sans-serif;
-  background: #e9ecef;
-  height: 100vh;
-  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #eaf6ff, #f9fbfc);
+  color: #1a1a1a;
 }
 
 .aura-bg {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top left, #dceeff 0%, transparent 40%),
-              radial-gradient(circle at bottom right, #e3f0ff 0%, transparent 50%),
-              #f9fafa;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  padding: 1.5in;
+  background: radial-gradient(circle at center, rgba(173, 216, 230, 0.25), transparent 70%);
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Centered white box */
 .content-box {
   background: white;
-  width: 80%;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
   max-width: 960px;
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   position: relative;
-  z-index: 2;
+}
+
+.title-box {
+  position: relative;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.content-box h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a2c4b;
-  margin-bottom: 1rem;
+.title-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.25), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.title-box h1 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 2px solid #007BFF;
+  border-radius: 20px;
+  font-size: 1.75rem;
 }
 
 .tagline {
+  text-align: center;
   font-size: 1.1rem;
-  font-weight: 400;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-/* Folder boxes */
 .folder-grid {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 2rem 0;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .folder {
-  flex: 1 1 20%;
-  min-width: 120px;
-  max-width: 160px;
-  padding: 1.2rem 0.5rem;
-  border-radius: 10px;
-  font-weight: 600;
-  color: #fff;
-  background: gray;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 140px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 0.5rem;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
   cursor: pointer;
 }
 
 .folder:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.folder-yellow { background: #f7d774; color: #5a4306; }
-.folder-purple { background: #bca7f2; color: #402c5a; }
-.folder-blue   { background: #8fc9ff; color: #113e63; }
-.folder-red    { background: #f99393; color: #5c1a1a; }
+.folder img {
+  width: 60px;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
 
-/* Page dots */
+.folder span {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.folder::before,
+.folder::after {
+  content: '';
+  width: 24px;
+  height: 32px;
+  background: url('pdf-icon.svg') no-repeat center/contain;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: rotate(-10deg);
+  opacity: 0.8;
+}
+
+.folder::after {
+  top: 20px;
+  left: 25px;
+  transform: rotate(5deg);
+  opacity: 0.6;
+}
+
+.folder-yellow { background-color: rgba(255, 255, 153, 0.3); }
+.folder-blue { background-color: rgba(153, 204, 255, 0.3); }
+.folder-purple { background-color: rgba(204, 153, 255, 0.3); }
+.folder-red { background-color: rgba(255, 153, 153, 0.3); }
+.folder-green { background-color: rgba(153, 255, 204, 0.3); }
+.folder-gray { background-color: rgba(220, 220, 220, 0.3); }
+
 .page-dots {
-  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
 }
 
 .dot {
-  display: inline-block;
   width: 12px;
   height: 12px;
-  margin: 0 6px;
+  background-color: #ccc;
   border-radius: 50%;
-  background: #ccc;
+  display: inline-block;
   transition: background 0.3s ease;
 }
 
+.dot:hover,
 .dot.active {
-  background: #6ba7ff;
+  background-color: #007BFF;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .folder-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .folder {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .content-box {
+    padding: 1rem;
+  }
+
+  .title-box h1 {
+    font-size: 1.25rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
 }
