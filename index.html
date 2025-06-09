@@ -7,36 +7,77 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="background-auras">
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+  </div>
   <div class="aura-bg">
+    <nav class="page-navigation">
+      <a href="toolkit.html" class="nav-arrow prev">&lt;</a>
+      <a href="about.html" class="nav-arrow next">&gt;</a>
+    </nav>
+    
+    <div class="page-preview prev">
+      <div class="content-box">
+        <header class="title-box">
+          <div class="title-aura"></div>
+          <h1>Research Toolkit</h1>
+        </header>
+      </div>
+    </div>
+    
+    <div class="page-preview next">
+      <div class="content-box">
+        <header class="title-box">
+          <div class="title-aura"></div>
+          <h1>About Us</h1>
+        </header>
+      </div>
+    </div>
+
     <main class="content-box">
-      <header class="title-box">
-        <div class="title-aura"></div>
-        <h1>Welcome to STEM by Step</h1>
-      </header>
+      <div class="main-content">
+        <header class="title-box">
+          <div class="title-aura"></div>
+          <h1>Welcome to STEM by Step</h1>
+        </header>
 
-      <div class="tagline">
-        Your journey to mastering STEM research starts here
-      </div>
+        <div class="tagline">
+          Your journey to mastering STEM research starts here
+        </div>
 
-      <div class="about-text">
-        <p>Discover comprehensive resources, tools, and guidance to help you excel in your STEM research journey. From foundational concepts to advanced techniques, we're here to support your academic growth.</p>
-      </div>
+        <div class="about-text">
+          <p>Discover comprehensive resources, tools, and guidance to help you excel in your STEM research journey. From foundational concepts to advanced techniques, we're here to support your academic growth.</p>
+        </div>
 
-      <div class="folder-grid">
-        <div class="folder folder-yellow">
-          <img src="folder-icon.svg" alt="Folder" /><span>Data Tools</span>
-        </div>
-        <div class="folder folder-blue">
-          <img src="folder-icon.svg" alt="Folder" /><span>Programming</span>
-        </div>
-        <div class="folder folder-purple">
-          <img src="folder-icon.svg" alt="Folder" /><span>Templates</span>
-        </div>
-        <div class="folder folder-red">
-          <img src="folder-icon.svg" alt="Folder" /><span>Roadmaps</span>
+        <div class="journey-flow">
+          <div class="floating-shape"></div>
+          <div class="floating-shape"></div>
+          <div class="floating-shape"></div>
+          
+          <div class="journey-step">
+            <h3>Curate Your Idea</h3>
+            <p>Begin with a spark of inspiration and shape it into a research concept</p>
+          </div>
+          <div class="flow-arrow"></div>
+          
+          <div class="journey-step">
+            <h3>Find Your Tools</h3>
+            <p>Access our simplified templates, roadmaps, and learning resources</p>
+          </div>
+          <div class="flow-arrow"></div>
+          
+          <div class="journey-step">
+            <h3>Execute & Refine</h3>
+            <p>Bring your research to life with peer guidance and platform features</p>
+          </div>
+
+          <a href="toolkit.html" class="start-button">Start Your Journey with Our Toolkit →</a>
         </div>
       </div>
 
@@ -44,6 +85,7 @@
         <a class="dot active" href="index.html" title="Home"></a>
         <a class="dot" href="about.html" title="About"></a>
         <a class="dot" href="toolkit.html" title="Toolkit"></a>
+        <a class="dot" href="projects.html" title="Featured Projects"></a>
       </nav>
     </main>
   </div>
