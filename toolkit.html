@@ -3,30 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Toolkit – STEM by Step</title>
+  <title>Research Toolkit – STEM by Step</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="background-auras">
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+  </div>
   <div class="aura-bg">
-    <main class="content-box">
-      <header class="title-box">
-        <div class="title-aura"></div>
-        <h1>Research Toolkit</h1>
-      </header>
+    <nav class="page-navigation">
+      <a href="about.html" class="nav-arrow prev">&lt;</a>
+      <a href="index.html" class="nav-arrow next">&gt;</a>
+    </nav>
 
-      <div class="folder-grid">
-        <div class="folder folder-blue">
-          <img src="folder-icon.svg" alt="Folder" /><span>Data Tools</span>
+    <div class="page-preview prev">
+      <div class="content-box">
+        <header class="title-box">
+          <div class="title-aura"></div>
+          <h1>About Us</h1>
+        </header>
+      </div>
+    </div>
+    
+    <div class="page-preview next">
+      <div class="content-box">
+        <header class="title-box">
+          <div class="title-aura"></div>
+          <h1>Home</h1>
+        </header>
+      </div>
+    </div>
+
+    <main class="content-box">
+      <div class="main-content">
+        <header class="title-box">
+          <div class="title-aura"></div>
+          <h1>Research Toolkit</h1>
+        </header>
+
+        <div class="tagline">
+          Essential tools and resources for your research journey
         </div>
-        <div class="folder folder-purple">
-          <img src="folder-icon.svg" alt="Folder" /><span>Programming</span>
-        </div>
-        <div class="folder folder-gray">
-          <img src="folder-icon.svg" alt="Folder" /><span>Templates</span>
-        </div>
-        <div class="folder folder-yellow">
-          <img src="folder-icon.svg" alt="Folder" /><span>Roadmaps</span>
+
+        <div class="folder-grid">
+          <div class="folder folder-yellow">
+            <h3 class="folder-title">Data Tools</h3>
+            <p class="folder-count">0 files</p>
+          </div>
+          <div class="folder folder-blue">
+            <h3 class="folder-title">Programming</h3>
+            <p class="folder-count">0 files</p>
+          </div>
+          <div class="folder folder-purple">
+            <h3 class="folder-title">Templates</h3>
+            <p class="folder-count">0 files</p>
+          </div>
+          <a href="projects.html" class="folder-link">
+            <div class="folder folder-red">
+              <h3 class="folder-title">Featured Projects</h3>
+              <p class="folder-count">1 project</p>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -34,6 +77,7 @@
         <a class="dot" href="index.html" title="Home"></a>
         <a class="dot" href="about.html" title="About"></a>
         <a class="dot active" href="toolkit.html" title="Toolkit"></a>
+        <a class="dot" href="projects.html" title="Featured Projects"></a>
       </nav>
     </main>
   </div>
