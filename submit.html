@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Your Work – STEM by Step</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-auras">
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+    <div class="background-aura"></div>
+  </div>
+  <div class="aura-bg">
+    <nav class="page-navigation">
+      <a href="projects.html" class="nav-arrow prev">&lt;</a>
+      <a href="index.html" class="nav-arrow next">&gt;</a>
+    </nav>
+
+    <main class="content-box">
+      <div class="main-content">
+        <header class="title-box">
+          <div class="title-aura"></div>
+          <h1>Submit Your Work</h1>
+        </header>
+
+        <div class="tagline">
+          Share your research project with the STEM by Step community
+        </div>
+
+        <form action="https://formspree.io/f/mldnjnrr" method="POST" class="submit-form">
+          <div class="form-group">
+            <label for="name">1. Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact">2. Email or Phone Number</label>
+            <input type="text" id="contact" name="contact" required>
+          </div>
+
+          <div class="form-group">
+            <label for="project-title">3. Research/Project Title</label>
+            <input type="text" id="project-title" name="project-title" required>
+          </div>
+
+          <div class="form-group">
+            <label for="abstract">4. Abstract</label>
+            <textarea id="abstract" name="abstract" rows="6" required></textarea>
+            <p class="field-hint">Provide a brief overview of your research project, including its objectives and potential impact.</p>
+          </div>
+
+          <p class="submission-note">We'll review your submission and respond as soon as possible.</p>
+
+          <button type="submit" class="start-button">Submit Project →</button>
+        </form>
+      </div>
+
+      <nav class="page-dots">
+        <a class="dot" href="index.html" title="Home"></a>
+        <a class="dot" href="about.html" title="About"></a>
+        <a class="dot" href="toolkit.html" title="Toolkit"></a>
+        <a class="dot" href="projects.html" title="Featured Projects"></a>
+      </nav>
+    </main>
+  </div>
+</body>
+</html> 
